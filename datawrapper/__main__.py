@@ -1020,7 +1020,7 @@ class Datawrapper:
         chart_id: str,
         unit: str = "px",
         mode: str = "rgb",
-        width: int = 400,
+        width: int | None = None,
         height: int | None = None,
         plain: bool = False,
         zoom: int = 2,
@@ -1046,7 +1046,7 @@ class Datawrapper:
         height : int, optional
             Height of visualization. If not specified, it takes the chart height,
             by default None
-        width : int, optional
+        width : int | None, optional
             Width of visualization. If not specified, it takes the chart width,
             by default None
         plain : bool, optional
