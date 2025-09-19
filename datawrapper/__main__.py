@@ -1021,6 +1021,7 @@ class Datawrapper:
         unit: str = "px",
         mode: str = "rgb",
         width: int = 400,
+        height: int | None = None,
         plain: bool = False,
         zoom: int = 2,
         scale: int = 1,
@@ -1042,6 +1043,9 @@ class Datawrapper:
         mode : str, optional
             One of rgb or cmyk. Which color mode the output should be in,
             by default "rgb"
+        height : int, optional
+            Height of visualization. If not specified, it takes the chart height,
+            by default None
         width : int, optional
             Width of visualization. If not specified, it takes the chart width,
             by default None
@@ -1072,6 +1076,7 @@ class Datawrapper:
         _query = {
             "unit": unit,
             "mode": mode,
+            "height": height,
             "width": width,
             "plain": json.dumps(plain),
             "zoom": zoom,
