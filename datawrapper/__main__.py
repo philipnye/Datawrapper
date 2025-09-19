@@ -1021,7 +1021,7 @@ class Datawrapper:
         unit: str = "px",
         mode: str = "rgb",
         width: int | None = None,
-        height: int | None = None,
+        height: int | None | str = "auto",
         plain: bool = False,
         zoom: int = 2,
         scale: int = 1,
@@ -1043,9 +1043,9 @@ class Datawrapper:
         mode : str, optional
             One of rgb or cmyk. Which color mode the output should be in,
             by default "rgb"
-        height : int, optional
+        height : int | None | str, optional
             Height of visualization. If not specified, it takes the chart height,
-            by default None
+            by default "auto"
         width : int | None, optional
             Width of visualization. If not specified, it takes the chart width,
             by default None
