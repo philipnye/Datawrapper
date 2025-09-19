@@ -1367,7 +1367,7 @@ class Datawrapper:
         bool
             True if the folder was deleted successfully.
         """
-        return self.delete(f"{self._FOLDERS_URL }/{folder_id}")
+        return self.delete(f"{self._FOLDERS_URL}/{folder_id}")
 
     #
     # "Me" methods
